@@ -1,0 +1,71 @@
+<h2> formulaire d'inscription</h2>
+<form [formGroup]="registerSIForm" (ngSubmit)="submit()"> 
+  <div class="row">
+        <div class="form-group col-md-6 ">
+            <label for="exampleFormControlInput1">Prénom*</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="prénom" formControlName ="surname">
+            <small class="text-danger" *ngIf="registerSIForm.get('surname').hasError('required')">Votre prénom est pas correct</small>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="exampleFormControlInput2">Nom*</label>
+            <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="nom" formControlName ="name">
+            <small class="text-danger" *ngIf="registerSIForm.get('surname').hasError('required')">Votre nom est pas correct</small>
+        </div>
+  </div>
+  <div class="row">
+        <div class="form-group col-md-6 ">
+            <label for="exampleFormControlInput3">Adresse email*</label>
+            <input type="email" class="form-control" id="exampleFormControlInput3" placeholder="name@exemple.com" formControlName ="email">
+            <small class="text-danger" *ngIf="registerSIForm.get('surname').hasError('required')">Votre adress email est pas correct ou insérer</small>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="exampleFormControlInput4">Mot de passe*</label>
+            <input type="password" class="form-control" id="exampleFormControlInput4" placeholder="mot de passe" formControlName ="password">
+            <small class="text-danger" *ngIf="registerSIForm.get('surname').hasError('required')">Votre prénom est pas correct</small>
+        </div>
+    </div>
+    <form [formGroup]="adressForms">
+        <div class="row">
+            <div  class="form-group col-md-5">
+                <label for="exampleFormControlSelect1">Pays*</label>
+                <select class="form-control" size="1" id="exampleFormControlSelect1" formControlName="country">
+                    <option selected="selected">Belgique</option>
+                    <option>France</option>
+                </select>
+                <small class="text-danger" *ngIf="registerSIForm.get('surname').hasError('required')">vous avez oublié de compléter</small>  
+            </div>
+            <div class="form-group col-md-5">
+                <label for="exampleFormControlInput7">Ville*</label>
+                <input type="text" class="form-control" id="exampleFormControlInput7" placeholder="ville" formControlName ="city">
+                <small class="text-danger" *ngIf="registerSIForm.get('surname').hasError('required')">Votre ville est pas correct</small>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="exampleFormControlInput8">Code postal*</label>
+                <input type="text" class="form-control" id="exampleFormControlInput8" placeholder="code postal" formControlName ="zipCode">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-10">
+                <label for="exampleFormControlInput9">Rue*</label>
+                <input type="text" class="form-control" id="exampleFormControlInput9" placeholder="rue" formControlName ="street">
+                <small class="text-danger" *ngIf="registerSIForm.get('surname').hasError('required')">Votre rue est pas correct</small>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="exampleFormControlInput10">N° maison/boite*</label>
+                <input type="text" class="form-control" id="exampleFormControlInput10"  formControlName ="houseNumber">
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="form-group col-md-6 ">
+            <label for="exampleFormControlInput5">GSM*</label>
+            <input type="tel" class="form-control" id="exampleFormControlInput(" placeholder="n° gsm" formControlName ="gsmNumber">
+            <small class="text-danger" *ngIf="registerSIForm.get('surname').hasError('required')">Votre numéro de téléphone est incorect</small>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="exampleFormControlInput6">Téléphone</label>
+            <input type="tel" class="form-control" id="exampleFormControlInput6" placeholder="n° téléphone" formControlName ="telNumber">
+        </div>
+    </div>
+    <button type="submit">enregistrer</button>
+</form>

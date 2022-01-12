@@ -1,0 +1,12 @@
+<h1>welcome to have your style</h1>
+<form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <div class="form-group">
+        <label for="exampleFormControlInput1">email</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@exemple.com" formControlName ="email">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput2">password</label>
+        <input type="password" class="form-control" id="exampleFormControlInput2"  formControlName ="password">
+    </div>
+    <button type="submit">connexion</button>
+</form>
